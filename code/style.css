@@ -63,6 +63,14 @@
     }
 
     /* HERO */
+    #name {
+  position: absolute;
+   /*  top: 400px; */
+    left: 40px;
+    /* z-index: 1; */
+   
+   
+}
     #img_container {
         width: 320px;
         height: 350px;
@@ -77,22 +85,44 @@
     }
 
 /* BADGES */
-  .badge {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      gap: 0.5rem;
-    }
+ /*  .badge_custom {
+    flex-direction: column !important;    imagen arriba, texto abajo 
+    align-items: center !important;
+    gap: 0 !important;               espacio vertical 
+  }
 
-    .badge img {
-      width: 60px !important;
-      height: 60px !important;
-    }
+  .badge_custom img {
+    width: 48px !important;               imagen más pequeña 
+    height: 48px !important;
+  }
 
-    .badge p {
-      margin: 0 !important;
-      padding: 0.5rem !important;
-      text-align: center;
+  .badge_custom p {
+    padding: 0 !important;
+    text-align: center !important;
+  } */
+
+   .badge_custom {
+        /* Tamaño adaptativo usando clamp() y calc() */
+        width: clamp(100px, calc(100px + (45 * ((100vw - 320px) / (932 - 320)))), 145px);
+        height: clamp(100px, calc(100px + (45 * ((100vw - 320px) / (932 - 320)))), 145px);
+        
+        /* PADDING REDUCIDO - Menor espacio interno */
+        padding: clamp(0.4rem, calc(0.4rem + (0.4 * ((100vw - 320px) / (932 - 320)))), 0.8rem);
+        
+        /* MARGIN REDUCIDO - Menor espacio externo */
+        margin: clamp(0.1rem, calc(0.1rem + (0.1 * ((100vw - 320px) / (932 - 320)))), 0.2rem);
+    }
+    
+    .badge_custom img {
+        /* Imágenes adaptativas 40px -> 75px */
+        width: clamp(40px, calc(40px + (35 * ((100vw - 320px) / (932 - 320)))), 75px) !important;
+        height: clamp(40px, calc(40px + (35 * ((100vw - 320px) / (932 - 320)))), 75px) !important;
+    }
+    
+    .badge_custom p {
+        font-size: clamp(0.6rem, calc(0.6rem + (0.2 * ((100vw - 320px) / (932 - 320)))), 0.8rem) !important;
+        margin-top: clamp(0.15rem, calc(0.15rem + (0.2 * ((100vw - 320px) / (932 - 320)))), 0.35rem) !important;
+        padding: 0 !important;
     }
   /* PORTAFOLIO - GALLERY */
    .responsive-row {
