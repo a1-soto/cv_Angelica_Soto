@@ -12,9 +12,9 @@
 
 <body>
     <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 ">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 mt-4 responsive-gap">
             <a href="/"
-                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                class="d-flex align-items-center mb-0 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                 <svg class="bi me-2" width="40" height="32" aria-hidden="true">
                     <use xlink:href="#bootstrap"></use>
                 </svg>
@@ -25,14 +25,17 @@
     </svg> ESTE ES PARA PONER EL LOG EN PVG -->
                 <!-- <img src="ruta/a/tu-logo.png" alt="Logo" width="40" height="32" class="me-5">     esto es para poner tu logo si es img-->
 
-                <span class="fs-4">Simple header</span> </a>
-            <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                <!--   <li class="nav-item"><a href="#" class="nav-link">Features</a></li> -->
-                <!--   <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li> -->
-                <!--  <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li> -->
-                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            </ul>
+                <span id="logo" class="fs-1">a1</span> </a>
+
+            <div class="d-flex align-items-center justify-content-center ">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+                    <!--   <li class="nav-item"><a href="#" class="nav-link">Features</a></li> -->
+                    <!--   <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li> -->
+                    <!--  <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li> -->
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                </ul>
+            </div>
         </header>
     </div>
 
@@ -43,16 +46,15 @@
 
                     <div id="img_container" class="col-10 col-sm-8 col-lg-7">
 
-                        <img src="istockphoto-2177231592-612x612.webp" class="d-block mx-lg-auto img-fluid"
-                            alt="Bootstrap Themes" width="700" height="500" loading="lazy" id="photo">
+                        <img src="istockphoto-2177231592-612x612.webp" id="photo" class="d-block mx-lg-auto img-fluid"
+                            alt="Bootstrap Themes" width="700" height="500" loading="lazy">
 
-                        <h1 id="name" class="display-6 fw-bold text-body-emphasis lh-1 mb-3">Angelica <br>Soto</h1>
+                        <h1 id="name" class="display-1 fw-bold text-body-emphasis lh-1 mb-3">Angelica <br>Soto</h1>
 
                     </div>
 
                     <div class="col-lg-5">
-                        <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with
-                            image</h2>
+                        <h2 class="display-6 fw-bold text-body-emphasis lh-1 mb-3">Web Developer</h2>
                         <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the
                             world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
                             responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
@@ -73,7 +75,7 @@
         </section>
 
         <section id="badges">
-            <div class="d-flex gap-lg-5 justify-content-center py-5">
+            <div class="d-flex gap-lg-5 justify-content-center py-3">
                 <span
                     class="badge  align-items-center p-2 pe-2 text-primary-emphasis  border-primary-subtle rounded-pill">
                     <img class="rounded-circle" width="80" height="80" src="https://github.com/mdo.png" alt="">
@@ -104,29 +106,33 @@
 
         <section id="formacion">
 
-            
+
         </section>
         <section id="tech-skils"></section>
         <section id="soft-skill"></section>
         <section id="work"></section>
-        <section id="portfolio">
+
+        <section id="portfolio_gallery">
             <div class="container col-xxl-8 px-4 py-lg-6">
-                <div class="row mb-5 text-center ">
+                <div id="section_1">
+                    <div class=" responsive-row row mb-5 text-center ">
                     
-                    <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4
-                        <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with
-                            image</h2>
-                        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the
-                            world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
-                            responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-                    </div>
-                    <div class="col-md-8 themed-grid-col">.col-md-8
-                        <img src="istockphoto-2177231592-612x612.webp" class="d-block mx-lg-auto img-fluid"
-                            alt="Bootstrap Themes" width="700" height="500" loading="lazy" id="photo">
+                        <div class="col-6 col-md-4 themed-grid-col">
+                            <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with
+                                image</h2>
+                            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the
+                                world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
+                                responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                        </div>
+                        <div class="col-md-8 themed-grid-col">
+                           <div class="space"></div>
+                            <img src="istockphoto-2177231592-612x612.webp" class="d-block mx-lg-auto img-fluid"
+                                alt="Bootstrap Themes" width="700" height="500" loading="lazy" id="photo">
+                        </div>
                     </div>
                 </div>
 
-                <div class="row mb-5 text-center">
+               <!--  <div class="row mb-5 text-center">
                     <div class="col-md-8 themed-grid-col">
                         <img src="istockphoto-2177231592-612x612.webp" class="d-block mx-lg-auto img-fluid"
                             alt="Bootstrap Themes" width="900" height="500" loading="lazy" id="photo">
@@ -135,11 +141,11 @@
                         <img src="istockphoto-2177231592-612x612.webp" class="d-block mx-lg-auto img-fluid"
                             alt="Bootstrap Themes" width="700" height="500" loading="lazy" id="photo">
                     </div>
-                    
+
                 </div>
 
-                 <div class="row mb-5 text-center ">
-                    
+                <div class="row mb-5 text-center ">
+
                     <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4
                         <img src="istockphoto-2177231592-612x612.webp" class="d-block mx-lg-auto img-fluid"
                             alt="Bootstrap Themes" width="700" height="500" loading="lazy" id="photo">
@@ -147,9 +153,9 @@
                     <div class="col-md-8 themed-grid-col">.col-md-8
                         <img src="istockphoto-2177231592-612x612.webp" class="d-block mx-lg-auto img-fluid"
                             alt="Bootstrap Themes" width="700" height="500" loading="lazy" id="photo">
-                    </div>
+                    </div> -->
                 </div>
-               <!--  <div class="row mb-3 text-center">
+                <!--  <div class="row mb-3 text-center">
                     <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4
                         <img src="istockphoto-2177231592-612x612.webp" class="d-block mx-lg-auto img-fluid"
                             alt="Bootstrap Themes" width="700" height="500" loading="lazy" id="photo">
