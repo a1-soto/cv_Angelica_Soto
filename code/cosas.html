@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acordeón Educación</title>
+
+  <!-- ✅ Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- ✅ Animate.css (para animaciones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- ✅ CSS Personalizado -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="colorlib-education">
+  <div class="container colorlib-narrow-content">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+        <span class="heading-meta">Education</span>
+        <h2 class="colorlib-heading animate-box">Education</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+        <div class="fancy-collapse-panel">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+            <!-- Panel 1 -->
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                    Primer Panel
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                  <p>Contenido del primer panel.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 2 -->
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false">
+                    Segundo Panel
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                  <p>Contenido del segundo panel.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 3 -->
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false">
+                    Tercer Panel
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                  <p>Contenido del tercer panel.</p>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /.panel-group -->
+        </div><!-- /.fancy-collapse-panel -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- ✅ Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- ✅ JS Personalizado -->
+<script src="js/script.js"></script>
+</body>
+</html>
+
+/////////////////////////////
+
+/* === Colorlib Education Section === */
+.colorlib-education {
+  background: #f8f8f8;
+  padding: 50px 0;
+}
+
+.colorlib-heading {
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.heading-meta {
+  display: block;
+  text-transform: uppercase;
+  color: #999;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Panel personalizado */
+.fancy-collapse-panel .panel {
+  border-radius: 0;
+  border: 1px solid #ddd;
+}
+
+.fancy-collapse-panel .panel-heading {
+  background: #fff;
+  padding: 15px;
+}
+
+.fancy-collapse-panel .panel-title a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.fancy-collapse-panel .panel-body {
+  background: #fff;
+  padding: 15px;
+}
+
+//////////////////////
+
+// script.js
+$(document).ready(function () {
+  // Ejemplo: mostrar en consola el panel abierto
+  $('#accordion').on('shown.bs.collapse', function (e) {
+    console.log('Panel abierto:', e.target.id);
+  });
+});
