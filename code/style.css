@@ -5,7 +5,7 @@
     font-size: 10px !important;
 } */
 
-p{
+p {
     font-size: 16px !important;
 }
 
@@ -19,21 +19,21 @@ p{
 /* HERO */
 #img_container {
     width: 590px;
-    height: 550px; 
-    overflow: hidden; 
+    height: 550px;
+    overflow: hidden;
 }
 
- #photo {
-   /*  clip-path: inset(0px 0px 0px 100px); */
-    width: 100%; 
+#photo {
+    clip-path: inset(0px 0px 0px 100px); 
+    width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
- 
+
 #name {
     position: absolute;
-    top: 400px;
-    left: 270px;
+    top: 500px;
+    left: 250px;
     z-index: 1;
 }
 
@@ -46,78 +46,92 @@ p{
 }
 
 .resume-item article {
-    position: relative; /* necesario para que ::before se posicione correctamente */
+    position: relative;
+    /* necesario para que ::before se posicione correctamente */
 }
 
 /* RESUME SECTION-EDUCATION */
-/* Resume Section */
-
 .resume {
-  font-family: "Poppins", sans-serif;
-  color: #333;
+    font-family: "Poppins", sans-serif;
+    color: #333;
 }
 
 .resume-title {
-  font-size: 24px;
-  font-weight: 600;
-  color: #1387c1; /* color azul principal */
-  margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1387c1;
+    /* color azul principal */
+    margin-bottom: 20px;
 }
 
 .resume-item {
-  margin-bottom: 60px;
-  position: relative;
+    margin-bottom: 60px;
+    position: relative;
 }
 
 .resume-item article::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  left: -1.8rem;
-  top: 0.25rem;
-  background: #fff;
-  border: 2px solid #1387c1;
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    left: -1.8rem;
+    top: 0.25rem;
+    background: #fff;
+    border: 2px solid #1387c1;
+
+    /*  margin-left: 10px;  */
+
 }
 
 .resume-content h4 {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 
 .resume-content h5 {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
 }
 
-.institution, .company {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
+.institution,
+.company {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
 }
 
 .resume-content p {
-  font-size: 14px;
-  line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .skill-item {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
+/* #css_icon{
+      object-fit: cover;
+      clip-path: inset(0px 0px 0px 0px); 
+     overflow: hidden; 
+     
+
+} */
+
+
+
 .progress {
-  background: #e0e0e0;
-  border-radius: 50px;
-  height: 8px;
+    background: #e0e0e0;
+    border-radius: 50px;
+    height: 8px;
 }
 
 .progress-bar {
-  background: #1387c1;
-  height: 8px;
-  border-radius: 50px;
+    background: #1387c1;
+    height: 8px;
+    border-radius: 50px;
 }
 
 
@@ -191,7 +205,7 @@ p{
     /* BADGES */
 
 
-    .badge_custom {
+    .badge_custom, .icon-container {
         /* Tamaño adaptativo usando clamp() y calc() */
         width: clamp(100px, calc(100px + (45 * ((100vw - 320px) / (932 - 320)))), 145px);
         height: clamp(100px, calc(100px + (45 * ((100vw - 320px) / (932 - 320)))), 145px);
@@ -203,7 +217,7 @@ p{
         margin: clamp(0.1rem, calc(0.1rem + (0.1 * ((100vw - 320px) / (932 - 320)))), 0.2rem);
     }
 
-    .badge_custom img {
+    .badge_custom img , icon-container img {
         /* Imágenes adaptativas 40px -> 75px */
         width: clamp(40px, calc(40px + (35 * ((100vw - 320px) / (932 - 320)))), 75px) !important;
         height: clamp(40px, calc(40px + (35 * ((100vw - 320px) / (932 - 320)))), 75px) !important;
@@ -216,4 +230,33 @@ p{
     }
 
 
+    /* sdfvñdlmgvdrjnhb */
+
+   .resume-item article::before {
+        left: -0.6rem !important;        /* Valor intermedio que funciona bien */
+        width: 11px !important;          /* Tamaño intermedio */
+        height: 11px !important;
+        top: 0.4rem !important;
+    }
+    
+    .resume-item article {
+        padding-left: 1.1rem !important;
+        margin-left: 0.4rem !important;
+    }
+
+    .costum_padding {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    ul {
+        padding-left: 0.8rem;        /* Menos padding para pantallas pequeñas */
+        margin-left: -0.4rem;
+        padding-right:0.8rem;      /* Mueve markers más a la izquierda */
+    }
+
+    li {
+        margin-left: 0.2rem;         /* Ajusta el texto */
+        padding-left: 0.3rem;        /* Espacio entre marker y texto */
+    }
 }
