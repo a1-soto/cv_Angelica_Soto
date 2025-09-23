@@ -61,9 +61,13 @@ p {
     font-weight: 600;
     color: #1387c1;
     /* color azul principal */
-    margin-bottom: 20px;
+    margin-bottom: 80px;
+   
 }
-
+#pro_skills{
+   margin-left: 80px; 
+}
+ 
 .resume-item {
     margin-bottom: 60px;
     position: relative;
@@ -112,16 +116,53 @@ p {
     margin-bottom: 15px;
 }
 
-/* #css_icon{
-      object-fit: cover;
+ #css_icon{
+    /*   object-fit: cover; */
       clip-path: inset(0px 0px 0px 0px); 
-     overflow: hidden; 
+  /*    overflow: hidden;  */
      
 
-} */
+} 
 
+#w3c_icon {
+   /*  object-fit: cover;  */
+     clip-path: inset(10px 0px 15px 0px); 
+/*   overflow: hidden;  */
+} 
 
+#ads_icon {
+  /*   object-fit: cover;  */
+     clip-path: inset(0px 0px 15px 0px); 
+ /*  overflow: hidden;  */ 
+     
 
+} 
+.icon_margin{
+   margin-top: 6px;  
+}
+.margin_costum_p{
+    margin-top: -10px;
+}
+
+#visual_icon{
+margin-top: 10px; 
+}
+
+#visual_icon_p{
+     margin-top: 10px; 
+}
+
+#figma_icon_p{
+    margin-top: 5px;
+}
+#ps_icon{
+    margin-top: -5px; 
+    margin-bottom: -5px;
+}
+#id_icon{
+  
+    margin-bottom: 5px;
+}
 .progress {
     background: #e0e0e0;
     border-radius: 50px;
