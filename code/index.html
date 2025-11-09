@@ -5,67 +5,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Tu CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- HEADER -->
-    <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 mt-4 responsive-gap">
-            <a href="/"
-                class="d-flex align-items-center mb-0 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                <svg class="bi me-2" width="40" height="32" aria-hidden="true">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
+    <header class="header-wrapper fixed-top">
+        <div class="header-content d-flex justify-content-between align-items-center mx-5 pt-3">
 
-                <!--    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-5" aria-hidden="true" viewBox="0 0 200 80">
-        Pega aquí las <path> o <g> de tu logo
-        <path d="M10 10 H 190 V 70 H 10 Z" fill="#0d6efd"/>
-    </svg> ESTE ES PARA PONER EL LOG EN PVG -->
-                <!-- <img src="ruta/a/tu-logo.png" alt="Logo" width="40" height="32" class="me-5">     esto es para poner tu logo si es img-->
+            <!-- Logo -->
+            <a href="/" id="logo" class="fs-1">a1</a>
 
-                <span id="logo" class="fs-1">a1</span> </a>
-
-            <div class="d-flex align-items-center justify-content-center ">
+            <!-- Nav Desktop -->
+            <nav class="d-none d-lg-block">
                 <ul class="nav nav-pills">
-                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                    <!--   <li class="nav-item"><a href="#" class="nav-link">Features</a></li> -->
-                    <!--   <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li> -->
-                    <!--  <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li> -->
-                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio_gallery" class="nav-link">Portafolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#professional_info" class="nav-link">About</a>
+                    </li>
                 </ul>
-            </div>
-        </header>
+            </nav>
+
+            <!-- Botón Hamburguesa (solo móvil) -->
+            <button class="btn-hamburger d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Abrir menú de navegación">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== OFFCANVAS MENU ===== -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <nav>
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active" data-bs-dismiss="offcanvas">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio_gallery" class="nav-link" data-bs-dismiss="offcanvas">Portafolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#professional_info" class="nav-link" data-bs-dismiss="offcanvas">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
+
 
     <main>
         <!-- HERO -->
         <section id="hero">
-            <div class="container col-xxl-8 px-4 py-6">
-                <div class="row flex-lg-row align-items-center g-5 py-5">
+            <div class="container col-xxl-8 px-4 py-5">
+                <div class=" row flex-lg-row align-items-center g-5 py-4">
 
-                    <div id="img_container" class="center-on-mobile col-10 col-sm-8 col-lg-7">
+                    <div id="img_container" class="col-10 col-sm-8 col-lg-7 mx-auto mx-lg-0">
                         <img src="istockphoto-2177231592-612x612.webp" id="photo" class="d-block mx-lg-auto img-fluid"
                             alt="Bootstrap Themes" width="700" height="500" loading="lazy">
                         <h1 id="name" class="display-2 fw-bold text-body-emphasis lh-2 mb-3">Angelica <br>Soto</h1>
                     </div>
 
-                    <div class=" custom-px col-lg-5">
+                    <div class="px-5 col-lg-5">
                         <h2 class="display-6 fw-bold text-body-emphasis lh-1 mb-3">Web Developer</h2>
-                        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the
-                            world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
-                            responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                        <p class="lead"> Desarrollador web especializado en frontend moderno, con enfoque en crear
+                            sitios que realmente funcionen. Combino buen diseño con código limpio y sólido, asegurándome
+                            de que cada proyecto sea
+                            responsive, rápido y fácil de mantener.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <div class="divider my-2 py-3 my-sm-2 py-sm-2 my-md-4 py-md-5"></div>
+        <div class="divider my-sm-2 py-3 my-md-3 py-md-4"></div>
 
         <!-- BADGES -->
         <section id="badges" class="container">
-            <div class="d-flex flex-wrap gap-4 gap-lg-5 justify-content-center py-3 py-lg-6 my-3 my-lg-6">
+            <div class="d-flex flex-wrap gap-4 gap-lg-5 justify-content-center py-3 py-lg-6 my-3 my-lg-5">
                 <span class="badge badge_custom text-primary-emphasis border-primary-subtle">
                     <img class="rounded-circle" width="80" height="80" src="https://github.com/mdo.png" alt="">
                     <p>Primary</p>
@@ -84,67 +121,59 @@
                 </span>
             </div>
         </section>
-        <div class="divider my-2 py-3 my-sm-2 py-sm-2 my-md-4 py-md-5"></div>
+        <div class="divider my-sm-2 py-3 my-md-3 py-md-4"></div>
 
 
 
         <!-- Professional Info -->
         <section id="professional_info">
-            <div class="container aos-init aos-animate px-4" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="row gx-5">
-                    <div class="costum_padding col-lg-6">
+            <div class="container px-5">
+                <div class="row">
+                    <div class="px-5 col-lg-6">
                         <!-- Education Section -->
-
-                        <div id="education_section" class="resume-item aos-init aos-animate" data-aos="fade-up">
+                        <div id="education_section" class="resume-item ms-lg-5">
                             <h3 class="resume-title">Education</h3>
-
                             <div class="resume-content">
-
                                 <article class="education-item">
                                     <h4>Certificado de Profesionalidad en Desarrollo Web</h4>
                                     <h5>2025</h5>
                                     <p class="institution"><em>Esla Centros de Formación</em></p>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius temporibus
-                                        quibusdam quas optio vitae accusamus!</p>
+                                    <p>HTML5, CSS3, JavaScript, Responsive Design, Proyecto final web completo</p>
                                 </article>
-
                                 <article class="education-item">
                                     <h4>Discovery Web + Piscina Intensiva</h4>
                                     <h5>2025</h5>
                                     <p class="institution"><em>42 Madrid Fundación Telefónica</em></p>
-                                    <p>Metodologías colaborativas de programación, trabajo en equipo técnico</p>
+                                    <p>Metodologías colaborativas de programación, trabajo en equipo técnico.
+                                        Aprendizaje autónomo y adaptación a nuevas tecnologías
+                                    </p>
                                 </article>
-
                                 <article class="education-item">
                                     <h4>Gestión del Marketing Digital</h4>
                                     <h5>2024</h5>
                                     <p class="institution"><em>Universidad Nebrija</em></p>
                                     <p>Gestión plataformas digitales, arquitectura web, organización contenidos</p>
                                 </article>
-
                                 <article class="education-item">
                                     <h4>Master en Fotografía</h4>
                                     <h5>2021-2022</h5>
                                     <p class="institution"><em>LENS Escuela de Artes Visuales</em></p>
                                     <p>Formación en artes visuales, creatividad aplicada al desarrollo de proyectos
-                                        artísticos</p>
+                                        artísticos. Adaptabilidad para trabajo en entornos dinámicos</p>
                                 </article>
-
                                 <article class="education-item">
                                     <h4>Licenciatura en Filosofía</h4>
                                     <h5>2010-2015</h5>
                                     <p class="institution"><em>Universidad de La Habana</em></p>
-                                    <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et
-                                        quis
-                                        delectus nihil temporibus sapiente</p>
+                                    <p>Análisis crítico, metodología, comunicación efectiva. Resolución de problemas
+                                        y pensamiento lógico</p>
                                 </article>
                             </div>
                         </div>
                     </div>
                     <!-- End Experience Section -->
-                    <div id="experience_section" class="costum_padding col-lg-6">
-                        <div class="resume-item aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                    <div id="experience_section" class="px-5 col-lg-6">
+                        <div class="resume-item">
                             <h3 class="resume-title">Professional Experience</h3>
 
                             <div class="resume-content">
@@ -164,51 +193,34 @@
                                 </article>
 
                                 <article class="experience-item">
-                                    <h4>Software Engineer</h4>
-                                    <h5>2019 - 2021</h5>
-                                    <p class="company"><em>Microsoft, Redmond, WA</em></p>
+                                    <h4>Profesora de Filosofía </h4>
+                                    <h5>2015 - 2021</h5>
+                                    <p class="company"><em>Universidad de La Habana, Cuba</em></p>
                                     <ul>
-                                        <li>Developed numerous marketing programs (logos, brochures, infographics,
-                                            presentations, and advertisements)</li>
-                                        <li>Managed up to 5 projects or tasks at a given time while under pressure
+                                        <li>Diseño y organización de contenidos para 500+ estudiantes anuales
+                                            multidisciplinarios
                                         </li>
-                                        <li>Recommended and consulted with clients on the most appropriate software
-                                            platforms</li>
-                                        <li>Created 4+ design presentations and proposals a month for clients and
-                                            account managers</li>
-                                    </ul>
-                                </article>
-
-                                <article class="experience-item">
-                                    <h4>Junior Software Developer</h4>
-                                    <h5>2017 - 2019</h5>
-                                    <p class="company"><em>Apple Inc., Cupertino, CA</em></p>
-                                    <ul>
-                                        <li>Implemented responsive websites and web applications using modern
-                                            JavaScript
-                                            frameworks</li>
-                                        <li>Collaborated with senior developers to maintain and optimize existing
-                                            applications</li>
-                                        <li>Participated in code reviews and contributed to team documentation
-                                            efforts
+                                        <li>Corrección ortográfica gramatical y estructuración de materiales educativos
                                         </li>
-                                        <li>Assisted in the development of RESTful APIs and microservices</li>
+                                        <li>Establecimiento de formatos de estilo establecidos para materiales
+                                            académicos
+                                        </li>
+                                        <li>Adaptación de contenido según diferentes audiencias y metodologías activas
+                                        </li>
                                     </ul>
                                 </article>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="divider my-2 py-3 my-sm-2 py-sm-2 my-md-4 py-md-499999"></div>
+        <div class="divider my-sm-2 py-3 my-md-3 py-md-4"></div>
         <!-- TECH SKILLS -->
         <section id="tech_skills">
-            <div class="container aos-init aos-animate px-4" data-aos="fade-up" data-aos-delay="100">
-                <div id="professional_skills_section" class="resume-item skills-animation aos-init aos-animate"
-                    data-aos="fade-up">
+            <div class="container aos-init aos-animate px-5" data-aos="fade-up" data-aos-delay="100">
+                <div id="professional_skills_section" class="resume-item skills-animation aos-init aos-animate">
                     <h3 id="pro_skills" class="resume-title">Professional Skills</h3>
                     <div class="resume-content">
                         <div class="skill-item">
@@ -216,33 +228,40 @@
                             <div class="d-flex flex-wrap justify-content-around align-items-center">
                                 <div class="icon-container d-flex flex-column align-items-center">
                                     <svg class="icon_margin" width="48" height="48" viewBox="0 0 48 48">
-                                        <image href="/img/HTML5_Badge.svg" x="0" y="0" width="48" height="48" />
+                                        <image href="img/HTML5_Badge.svg" x="0" y="0" width="48" height="48" />
                                     </svg>
                                     <p>Html</p>
                                 </div>
                                 <div class="icon-container d-flex flex-column align-items-center">
                                     <svg width="63" height="63" viewBox="0 0 63 63">
-                                        <image id="css_icon" href="/img/css_blanco.png" x="0" y="0" width="63"
+                                        <image id="css_icon" href="img/css_blanco.png" x="0" y="0" width="63"
                                             height="63" />
                                     </svg>
-                                    <p class="margin_costum_p">Css</p>
+
+                                    <p class="margin_custom_p">Css</p>
                                 </div>
                                 <div class="icon-container d-flex flex-column align-items-center">
                                     <svg class="icon_margin" width="50" height="50" viewBox="0 0 50 50">
-                                        <image href="/img/Unofficial_JavaScript_logo_2.svg.png" x="0" y="0" width="50"
+                                        <image href="img/Unofficial_JavaScript_logo_2.svg.png" x="0" y="0" width="50"
                                             height="50" />
                                     </svg>
                                     <p>JavaScipt</p>
                                 </div>
                                 <div class="icon-container d-flex flex-column align-items-center">
-                                    <svg width="60" height="60" viewBox="0 0 60 60">
-                                        <image id="w3c_icon" href="/img/w3c.png" x="0" y="0" width="60" height="60" />
+                                    <svg width="62" height="62" viewBox="0 0 60 60">
+                                        <image id="w3c_icon" href="img/w3c.png" x="0" y="0" width="62" height="62" />
                                     </svg>
-                                    <p class="margin_costum_p"></p>
+                                    <p></p>
+                                </div>
+                                <div class="icon-container d-flex flex-column align-items-center">
+                                    <svg class="icon_margin" width="56" height="56" viewBox="0 0 54 54">
+                                        <image href="img/scss-logo.svg" x="0" y="0" width="56" height="56" />
+                                    </svg>
+                                    <p> </p>
                                 </div>
                                 <div class="icon-container d-flex flex-column align-items-center">
                                     <svg class="icon_margin" width="48" height="48" viewBox="0 0 48 48">
-                                        <image href="/img/bootstrap-fill.svg" x="0" y="0" width="48" height="48" />
+                                        <image href="img/bootstrap-fill.svg" x="0" y="0" width="48" height="48" />
                                     </svg>
                                     <p>Bootstrap</p>
                                 </div>
@@ -251,29 +270,29 @@
 
                         <div class="skill-item">
                             <!--  <h4>Herramientas:</h4> -->
-                            <div class="d-flex flex-wrap justify-content-around align-items-center mt-5">
+                            <div class="d-flex flex-wrap justify-content-around align-items-center">
                                 <div class="icon-container d-flex flex-column align-items-center">
                                     <svg class="icon_margin" width="50" height="50" viewBox="0 0 48 48">
-                                        <image href="/img/git_fondo.png" x="0" y="0" width="48" height="48" />
+                                        <image href="img/git_fondo.png" x="0" y="0" width="48" height="48" />
                                     </svg>
                                     <p>Git</p>
                                 </div>
                                 <div class="icon-container d-flex flex-column align-items-center">
                                     <svg width="65" height="65" viewBox="0 0 65 65">
-                                        <image href="/img/github_fondo.png" x="0" y="0" width="65" height="65" />
+                                        <image href="img/github_fondo.png" x="0" y="0" width="65" height="65" />
                                     </svg>
-                                    <p class="margin_costum_p">Github</p>
+                                    <p class="margin_custom_p">Github</p>
                                 </div>
                                 <div class="icon-container d-flex flex-column align-items-center">
                                     <svg id="visual_icon" width="45" height="45" viewBox="0 0 45 45">
-                                        <image href="/img/Visual_Studio_Code_1.35_icon.svg.png" x="0" y="0" width="45"
+                                        <image href="img/Visual_Studio_Code_1.35_icon.svg.png" x="0" y="0" width="45"
                                             height="45" />
                                     </svg>
                                     <p id="visual_icon_p">Visual Studio</p>
                                 </div>
                                 <div class="icon-container d-flex flex-column align-items-center">
                                     <svg width="48" height="48" viewBox="0 0 24 24">
-                                        <image href="/img/Figma-logo.svg.png" x="0" y="0" width="24" height="24" />
+                                        <image href="img/Figma-logo.svg.png" x="0" y="0" width="24" height="24" />
                                     </svg>
                                     <p id="figma_icon_p">Figma</p>
                                 </div>
@@ -282,99 +301,103 @@
 
                         <div class="skill-item">
                             <!-- <h4>UI/UX Design</h4> -->
-                            <div class="d-flex flex-wrap justify-content-around align-items-center mt-5">
+                            <div class="d-flex flex-wrap justify-content-around align-items-center">
                                 <div class="icon-container d-flex flex-column align-items-center">
                                     <svg class="icon_margin" width="58" height="58" viewBox="0 0 58 58">
-                                        <image id="ads_icon" href="/img/Google_Ads_logo.svg.png" x="0" y="0" width="58"
+                                        <image id="ads_icon" href="img/Google_Ads_logo.svg.png" x="0" y="0" width="58"
                                             height="58" />
                                     </svg>
-                                    <p class="margin_costum_p">Google Ads</p>
+                                    <p class="margin_custom_p">Google Ads</p>
                                 </div>
                                 <div class="icon-container d-flex flex-column align-items-center">
                                     <svg id="ps_icon" width="65" height="65" viewBox="0 0 65 65">
-                                        <image href="/img/adobe-photoshop-logo-0.png" x="0" y="0" width="65"
+                                        <image href="img/adobe-photoshop-logo-0.png" x="0" y="0" width="65"
                                             height="65" />
                                     </svg>
                                     <p>Photoshop</p>
                                 </div>
                                 <div class="icon-container d-flex flex-column align-items-center">
                                     <svg id="id_icon" width="48" height="48" viewBox="0 0 24 24">
-                                        <image href="/img/Adobe_InDesign_CC_icon.svg.png" x="0" y="0" width="24"
+                                        <image href="img/Adobe_InDesign_CC_icon.svg.png" x="0" y="0" width="24"
                                             height="24" />
                                     </svg>
                                     <p>InDesing</p>
                                 </div>
                                 <div class="icon-container d-flex flex-column align-items-center">
                                     <svg width="48" height="48" viewBox="0 0 24 24">
-                                        <image href="/img/canva.jpg" x="0" y="0" width="24" height="24" />
+                                        <image href="img/canva.jpg" x="0" y="0" width="24" height="24" />
                                     </svg>
                                     <p>Canva</p>
                                 </div>
                                 <div class="icon-container d-flex flex-column align-items-center">
                                     <svg width="48" height="48" viewBox="0 0 48 48">
-                                        <image href="/img/capture.jpg" x="0" y="0" width="48" height="48" />
+                                        <image href="img/capture.jpg" x="0" y="0" width="48" height="48" />
                                     </svg>
                                     <p>Capture One</p>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
-
-
-
-
-
                 </div>
             </div>
             </div>
         </section>
-
-        <div class="divider my-2 py-3 my-sm-2 py-sm-2 my-md-4 py-md-5"></div>
-
+        <div class="divider my-sm-2 py-3 my-md-3 py-md-4"></div>
         <section id="portfolio_gallery">
-            <div class="container col-xxl-8 px-4 py-lg-6">
-                <div class="container">
-                    <!-- 1️⃣ PRIMERA FILA: imagen a la DERECHA -->
-                    <div class="row mb-3 text-center flex-row-reverse gallery_section">
-                        <div class="col-md-8 themed-grid-col">
-                            <div class="space"></div>
-                            <img src="istockphoto-2177231592-612x612.webp" class="img-fluid w-100 d-block"
-                                alt="Imagen 1">
-                        </div>
-                        <div class="col-md-4 themed-grid-col">
-                            <h2 class="display-6 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned </h2>
-                            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap,
-                                the
-                                world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
-                                responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
-                            </p>
-                        </div>
+            <div class="container col-xxl-6 px-5 py-lg-6">
+                <!-- 1️⃣ PRIMERA FILA: imagen a la DERECHA -->
+                <div class="row mt-3 px-3 text-center flex  justify-content-around align-items-center
+                     gallery_section">
+                    <div class="col-md-5 themed-grid-col pb-0 pb-md-5 mb-md-5">
+                        <h2 class="display-6 fw-bold text-body-emphasis lh-1 my-3 ">Portafolio</h2>
+                        <p class="lead">Selección de proyectos</p>
                     </div>
+                    <div class="col-md-5 pb-0 themed-grid-col">
 
-
+                        <a class="web-gallery" href="websites/client-1-web-1.html"><img src="img/website-vie01.jpg"
+                                class="img-fluid w-100 d-block" alt="Imagen 1"></a>
+                    </div>
                 </div>
 
-
                 <!-- 2️⃣ SEGUNDA FILA: imagen a la IZQUIERDA -->
-                <div class="row mb-3 text-centergallery_section">
-                    <div class="col-md-8 themed-grid-col ">
-                        <div class="space"></div>
-                        <img src="istockphoto-2177231592-612x612.webp" class="img-fluid w-100 d-block" alt="Imagen 2">
+                <div class="row my-0 px-3 text-center gallery_section justify-content-around align-items-center">
+                    <div class="col-md-5 pb-0 themed-grid-col">
+
+                        <a class="web-gallery" href="websites/client-1-web-2.html"><img src="img/website-vie02.jpg"
+                                class="img-fluid w-100 d-block" alt="Imagen 2"></a>
                     </div>
-                    <div class="col-md-4 themed-grid-col"></div>
+                    <div class="col-md-5 pb-0 themed-grid-col"></div>
                 </div>
 
                 <!-- 3️⃣ TERCERA FILA: imagen a la DERECHA -->
-                <div class="row mb-3 text-center flex-row-reverse gallery_section">
-                    <div class="col-md-8 themed-grid-col">
-                        <div class="space"></div>
-                        <img src="istockphoto-2177231592-612x612.webp" class="img-fluid w-100 d-block" alt="Imagen 3">
+                <div class="row my-0 px-3 text-center gallery_section justify-content-around align-items-center">
+                    <div class="col-md-5 pb-0 themed-grid-col">
                     </div>
-                    <div class="col-md-4 themed-grid-col"></div>
+                    <div class="col-md-5 pb-0 themed-grid-col">
+
+                        <a class="web-gallery" href="websites/client-1-web-1.html"><img src="img/website-vie01.jpg"
+                                class="img-fluid w-100 d-block" alt="Imagen3"></a>
+                    </div>
                 </div>
-            </div>>
+
+
+                <!-- 3️⃣ CUARTA FILA: imagen a la DERECHA -->
+                <div class="row my-0 px-3 text-center gallery_section justify-content-around align-items-center">
+                    <div class="col-md-5 pb-0 themed-grid-col">
+                        <div class="d-flex gap-2 justify-content-center justify-content-md-start">
+                            <button class="button align-items-center" type="button">
+                                More
+                                <!--  <svg class="bi ms-1" width="20" height="20" aria-hidden="true">
+                                    <use xlink:href="#arrow-right-short"></use>
+                                </svg> -->
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-5 pb-0 themed-grid-col">
+                    </div>
+                </div>
+
+            </div>
         </section>
 
     </main>
@@ -383,12 +406,12 @@
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+                <!-- <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
                     aria-label="Bootstrap">
                     <svg class="bi" width="30" height="24" aria-hidden="true">
                         <use xlink:href="#bootstrap"></use>
                     </svg>
-                </a>
+                </a> -->
                 <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Company, Inc</span>
             </div>
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
@@ -410,6 +433,7 @@
                         </svg>
                     </a>
                 </li>
+
                 <li class="ms-3">
                     <a class="text-body-secondary" href="#" aria-label="Linkedin">
                         <svg id="linkedin-color" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -424,16 +448,42 @@
     </div>
 
 
+    <!-- ✅ 1. Bootstrap JS PRIMERO -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
 
-    <!-- AOS CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-    <!-- AOS JS -->
+    <!-- ✅ 2. AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
             duration: 1000,
             once: true
+        });
+    </script>
+
+    <!-- ✅ 3. Tu script personalizado AL FINAL -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const offcanvasLinks = document.querySelectorAll('#offcanvasMenu a[href^="#"]');
+
+            offcanvasLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    const offcanvasElement = document.getElementById('offcanvasMenu');
+                    const offcanvasInstance = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
+                    offcanvasInstance.hide();
+                });
+            });
+
+            const header = document.querySelector('.header-wrapper');
+            if (header) {
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > 10) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                });
+            }
         });
     </script>
 

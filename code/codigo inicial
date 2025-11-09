@@ -1,0 +1,229 @@
+/* ========================================
+   SECCIÓN PORTFOLIO CON EFECTO ZIGZAG
+======================================== */
+#portfolio_gallery {
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+/* Contenedor principal con espaciado controlado */
+#portfolio_gallery .container {
+    position: relative;
+}
+
+.space {
+    /*    height: 50px; */
+}
+
+/* ========================================
+   PRIMERA FILA: SIN ZIGZAG (Normal)
+======================================== */
+
+.gallery_section:nth-child(1) {
+    position: relative;
+    margin-bottom: -80px;
+    /* Margen negativo para acercar la siguiente fila */
+    transform: translateY(0);
+    z-index: 10;
+}
+
+/* Reducir DRÁSTICAMENTE la altura del div de título */
+.gallery_section:nth-child(1) .themed-grid-col:first-child {
+    padding: 5px 20px;
+    /* Padding mínimo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Mantiene centrado verticalmente */
+    align-items: center;
+    /* Mantiene centrado horizontalmente */
+}
+
+.gallery_section:nth-child(1) h2 {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+}
+
+.gallery_section:nth-child(1) .lead {
+    margin-bottom: 0;
+    line-height: 1.3;
+}
+
+/* 🔴 IMPORTANTE: Anular el top: -70px SOLO para la imagen de la primera fila */
+.gallery_section:nth-child(1) .web-gallery {
+    top: 0 !important;
+    /* Sin desplazamiento hacia arriba */
+}
+
+/* ========================================
+   FILAS 2+ CON SOLAPAMIENTO VERTICAL
+======================================== */
+
+.gallery_section:nth-child(n+2) {
+    position: relative;
+    margin-bottom: -100px;
+    /* Crea el solapamiento entre filas */
+    transition: transform 0.3s ease;
+}
+
+/* Eliminar margen negativo en la última fila */
+.gallery_section:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   PATRÓN ZIGZAG ALTERNADO (desde fila 2)
+======================================== */
+
+/* Segunda fila (índice 2): desplazada hacia abajo */
+.gallery_section:nth-child(2) {
+    transform: translateY(80px);
+    z-index: 9;
+}
+
+/* Tercera fila (índice 3): posición normal */
+.gallery_section:nth-child(3) {
+    transform: translateY(0);
+    z-index: 8;
+}
+
+/* Cuarta fila (índice 4): desplazada hacia abajo */
+.gallery_section:nth-child(4) {
+    transform: translateY(80px);
+    z-index: 7;
+}
+
+/* Quinta fila (índice 5): posición normal */
+.gallery_section:nth-child(5) {
+    transform: translateY(0);
+    z-index: 6;
+}
+
+/* Sexta fila (índice 6): desplazada hacia abajo */
+.gallery_section:nth-child(6) {
+    transform: translateY(80px);
+    z-index: 5;
+}
+
+/* Séptima fila (índice 7): posición normal */
+.gallery_section:nth-child(7) {
+    transform: translateY(0);
+    z-index: 4;
+}
+
+/* Octava fila (índice 8): desplazada hacia abajo */
+.gallery_section:nth-child(8) {
+    transform: translateY(80px);
+    z-index: 3;
+}
+
+/* ========================================
+   ESTILO DE LAS COLUMNAS
+======================================== */
+
+.themed-grid-col {
+    position: relative;
+    padding: 20px;
+}
+
+.web-gallery {
+    display: inline-block;
+    /* permite aplicar hover */
+    width: 100%;
+    /* ocupa el ancho completo de la columna */
+    text-decoration: none;
+    /* elimina subrayado */
+    overflow: visible;
+    /* evita que se corte la sombra */
+    position: relative;
+    /* Necesario para mover solo el bloque */
+    top: -70px;
+    /* 🟢 Mueve todo el enlace (imagen incluida) hacia arriba */
+    /* 💡 Puedes ajustar este valor: -10px, -15px, -30px según lo que busques */
+}
+
+/* 🖼️ Imagen dentro del enlace */
+.web-gallery img {
+    display: block;
+    /* evita espacios fantasma */
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    /* transición suave */
+    will-change: transform, box-shadow;
+    /* mejora rendimiento */
+    border-radius: 8px;
+    /* opcional: bordes redondeados */
+}
+
+/* 🟩 ZIGZAG PERMANENTE - SOLO desde fila 2 en adelante */
+/* Filas impares (desde la 2da): suben ligeramente */
+.gallery_section:nth-child(n+2):nth-of-type(odd) .web-gallery {
+    transform: translateY(-25px);
+}
+
+/* Filas pares (desde la 2da): bajan ligeramente */
+.gallery_section:nth-child(n+2):nth-of-type(even) .web-gallery {
+    transform: translateY(25px);
+}
+
+/* 🧱 Evita que se corte la imagen o sombra si luego se agrega */
+.col-md-5.themed-grid-col {
+    overflow: visible !important;
+}
+
+/* ✨ Efecto hover (al pasar el cursor por el enlace) */
+.web-gallery:hover img,
+.web-gallery:focus img {
+    transform: translateY(-8px) scale(1.03);
+    /* movimiento + leve zoom */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.60);
+    /* sombra flotante */
+}
+
+/* ========================================
+   RESPONSIVE: MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    /* Primera fila sigue normal */
+    .gallery_section:nth-child(1) {
+        margin-bottom: 30px;
+    }
+
+    /* Desactivar el zigzag en móviles para el resto */
+    .gallery_section:nth-child(n+2) {
+        margin-bottom: 30px;
+        transform: translateY(0) !important;
+    }
+
+    /* Espaciado más compacto */
+    .themed-grid-col {
+        padding: 15px 10px;
+    }
+
+    .gallery_section:nth-child(1) .themed-grid-col:first-child {
+        padding: 10px 10px;
+    }
+
+    /* Resetear zigzag permanente en móviles */
+    .gallery_section:nth-child(n+2):nth-of-type(odd) .web-gallery,
+    .gallery_section:nth-child(n+2):nth-of-type(even) .web-gallery {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 576px) {
+    #portfolio_gallery {
+        padding: 40px 0;
+    }
+
+    .gallery_section:nth-child(1) {
+        margin-bottom: 20px;
+    }
+
+    .gallery_section:nth-child(n+2) {
+        margin-bottom: 20px;
+    }
+}
