@@ -28,6 +28,10 @@ body p {
     scroll-margin-top: 90px;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* ===== HEADER ===== */
 .header-wrapper {
     background-color: white;
@@ -207,6 +211,26 @@ body p {
     z-index: 1;
 }
 
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+
+
 /* Resume layout base */
 .resume-item article {
     position: relative;
@@ -233,8 +257,8 @@ body p {
     margin-left: 80px;
 }
 
-#education-section {
-    padding-left: 20px;
+#education_section {
+    /*   padding-left: 20px; */
 }
 
 .resume-item {
@@ -377,8 +401,8 @@ li {
 /* Primera fila sin desplazamiento */
 
 .gallery_section:first-of-type .web-gallery {
-    top: 0 !important;
-    transform: none !important;
+    top: 0;
+    transform: none;
 }
 
 .web-gallery {
@@ -459,7 +483,7 @@ li {
 
 
 /* ------------ MEDIA Q --------------- */
-@media(max-width:767px) {
+@media (max-width:767px) {
     body {
         padding-top: 90px;
         /* Header puede ser ligeramente más alto */
@@ -645,7 +669,7 @@ li {
 /* ========================================
    RESPONSIVE: TABLET
 ======================================== */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1199px) {
     #img_container {
         width: 500px;
         /* Ajusta el tamaño del contenedor */

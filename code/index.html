@@ -9,6 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
+    <!-- Boostrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
     <!-- AOS CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -31,11 +34,12 @@
                         <a href="index.html" class="nav-link active">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#portfolio_gallery" class="nav-link">Portafolio</a>
+                        <a href="#professional_info" class="nav-link">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#professional_info" class="nav-link">About</a>
+                        <a href="#portfolio_gallery" class="nav-link">Portafolio</a>
                     </li>
+
                 </ul>
             </nav>
 
@@ -62,13 +66,13 @@
             <nav>
                 <ul class="nav nav-pills flex-column">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link active" data-bs-dismiss="offcanvas">Home</a>
+                        <a href="index.html" class="nav-link active" data-bs-dismiss="offcanvas">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#professional_info" class="nav-link">Resume</a>
                     </li>
                     <li class="nav-item">
                         <a href="#portfolio_gallery" class="nav-link" data-bs-dismiss="offcanvas">Portafolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#professional_info" class="nav-link" data-bs-dismiss="offcanvas">About</a>
                     </li>
                 </ul>
             </nav>
@@ -81,13 +85,11 @@
         <section id="hero">
             <div class="container col-xxl-8 px-4 py-5">
                 <div class=" row flex-lg-row align-items-center g-5 py-4">
-
                     <div id="img_container" class="col-10 col-sm-8 col-lg-7 mx-auto mx-lg-0">
                         <img src="istockphoto-2177231592-612x612.webp" id="photo" class="d-block mx-lg-auto img-fluid"
                             alt="Bootstrap Themes" width="700" height="500" loading="lazy">
                         <h1 id="name" class="display-2 fw-bold text-body-emphasis lh-2 mb-3">Angelica <br>Soto</h1>
                     </div>
-
                     <div class="px-5 col-lg-5">
                         <h2 class="display-6 fw-bold text-body-emphasis lh-1 mb-3">Web Developer</h2>
                         <p class="lead"> Desarrollador web especializado en frontend moderno, con enfoque en crear
@@ -96,34 +98,47 @@
                             responsive, rápido y fácil de mantener.</p>
                     </div>
                 </div>
+
+
+                <div class="container col-xxl-8 px-4 py-5  d-flex flex-wrap justify-content-center">
+                    <div class="cta-group">
+                        <a href="#" class="link-underline">
+                            Download Resume <i class="bi bi-download"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
-        <div class="divider my-sm-2 py-3 my-md-3 py-md-4"></div>
+
+        <!--  <div class="divider my-sm-2 py-3 my-md-3 py-md-3"></div> -->
 
         <!-- BADGES -->
-        <section id="badges" class="container">
+        <!--   <section id="badges" class="container">
             <div class="d-flex flex-wrap gap-4 gap-lg-5 justify-content-center py-3 py-lg-6 my-3 my-lg-5">
                 <span class="badge badge_custom text-primary-emphasis border-primary-subtle">
-                    <img class="rounded-circle" width="80" height="80" src="https://github.com/mdo.png" alt="">
+                    <img class="rounded-circle" width="80" height="80" src="https://github.com/mdo.png" loading="lazy"
+                        alt="">
                     <p>Primary</p>
                 </span>
                 <span class="badge badge_custom text-primary-emphasis border-primary-subtle">
-                    <img class="rounded-circle" width="80" height="80" src="https://github.com/mdo.png" alt="">
+                    <img class="rounded-circle" width="80" height="80" src="https://github.com/mdo.png" loading="lazy"
+                        alt="">
                     <p>Primary</p>
                 </span>
                 <span class="badge badge_custom text-primary-emphasis border-primary-subtle">
-                    <img class="rounded-circle" width="80" height="80" src="https://github.com/mdo.png" alt="">
+                    <img class="rounded-circle" width="80" height="80" src="https://github.com/mdo.png" loading="lazy"
+                        alt="">
                     <p>Primary</p>
                 </span>
                 <span class="badge badge_custom text-primary-emphasis border-primary-subtle">
-                    <img class="rounded-circle" width="80" height="80" src="https://github.com/mdo.png" alt="">
+                    <img class="rounded-circle" width="80" height="80" src="https://github.com/mdo.png" loading="lazy"
+                        alt="">
                     <p>Primary</p>
                 </span>
             </div>
-        </section>
+        </section> -->
+
         <div class="divider my-sm-2 py-3 my-md-3 py-md-4"></div>
-
-
 
         <!-- Professional Info -->
         <section id="professional_info">
@@ -171,11 +186,10 @@
                             </div>
                         </div>
                     </div>
-                    <!-- End Experience Section -->
+                    <!--Experience Section -->
                     <div id="experience_section" class="px-5 col-lg-6">
                         <div class="resume-item">
                             <h3 class="resume-title">Professional Experience</h3>
-
                             <div class="resume-content">
                                 <article class="experience-item">
                                     <h4>Recepcionista y Soporte Digital</h4>
@@ -191,7 +205,6 @@
                                         <li>Soporte al cliente y trabajo en equipo en proyectos digitales</li>
                                     </ul>
                                 </article>
-
                                 <article class="experience-item">
                                     <h4>Profesora de Filosofía </h4>
                                     <h5>2015 - 2021</h5>
@@ -217,6 +230,7 @@
         </section>
 
         <div class="divider my-sm-2 py-3 my-md-3 py-md-4"></div>
+
         <!-- TECH SKILLS -->
         <section id="tech_skills">
             <div class="container aos-init aos-animate px-5" data-aos="fade-up" data-aos-delay="100">
@@ -237,7 +251,6 @@
                                         <image id="css_icon" href="img/css_blanco.png" x="0" y="0" width="63"
                                             height="63" />
                                     </svg>
-
                                     <p class="margin_custom_p">Css</p>
                                 </div>
                                 <div class="icon-container d-flex flex-column align-items-center">
@@ -340,9 +353,10 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
+
         <div class="divider my-sm-2 py-3 my-md-3 py-md-4"></div>
+
         <section id="portfolio_gallery">
             <div class="container col-xxl-6 px-5 py-lg-6">
                 <!-- 1️⃣ PRIMERA FILA: imagen a la DERECHA -->
@@ -353,9 +367,8 @@
                         <p class="lead">Selección de proyectos</p>
                     </div>
                     <div class="col-md-5 pb-0 themed-grid-col">
-
                         <a class="web-gallery" href="websites/client-1-web-1.html"><img src="img/website-vie01.jpg"
-                                class="img-fluid w-100 d-block" alt="Imagen 1"></a>
+                                loading="lazy" class="img-fluid w-100 d-block" alt="Imagen 1"></a>
                     </div>
                 </div>
 
@@ -364,7 +377,7 @@
                     <div class="col-md-5 pb-0 themed-grid-col">
 
                         <a class="web-gallery" href="websites/client-1-web-2.html"><img src="img/website-vie02.jpg"
-                                class="img-fluid w-100 d-block" alt="Imagen 2"></a>
+                                loading="lazy" class="img-fluid w-100 d-block" alt="Imagen 2"></a>
                     </div>
                     <div class="col-md-5 pb-0 themed-grid-col"></div>
                 </div>
@@ -376,7 +389,7 @@
                     <div class="col-md-5 pb-0 themed-grid-col">
 
                         <a class="web-gallery" href="websites/client-1-web-1.html"><img src="img/website-vie01.jpg"
-                                class="img-fluid w-100 d-block" alt="Imagen3"></a>
+                                loading="lazy" class="img-fluid w-100 d-block" alt="Imagen3"></a>
                     </div>
                 </div>
 
@@ -385,12 +398,9 @@
                 <div class="row my-0 px-3 text-center gallery_section justify-content-around align-items-center">
                     <div class="col-md-5 pb-0 themed-grid-col">
                         <div class="d-flex gap-2 justify-content-center justify-content-md-start">
-                            <button class="button align-items-center" type="button">
-                                More
-                                <!--  <svg class="bi ms-1" width="20" height="20" aria-hidden="true">
-                                    <use xlink:href="#arrow-right-short"></use>
-                                </svg> -->
-                            </button>
+                            <a href="#portfolio" class="btn-ghost">
+                                More <i class="bi bi-arrow-up-right"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-5 pb-0 themed-grid-col">
@@ -412,7 +422,7 @@
                         <use xlink:href="#bootstrap"></use>
                     </svg>
                 </a> -->
-                <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Company, Inc</span>
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Angelica Soto</span>
             </div>
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
                 <li class="ms-3">
