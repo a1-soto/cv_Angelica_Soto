@@ -30,6 +30,7 @@ body p {
 
 a {
     text-decoration: none;
+    color: #0d6efd;
 }
 
 /* ===== HEADER ===== */
@@ -254,7 +255,7 @@ a {
 
 /* Ajustes generales del bloque pro_skills */
 #pro_skills {
-    margin-left: 80px;
+    /*  margin-left: 80px; */
 }
 
 #education_section {
@@ -437,25 +438,6 @@ li {
     /* opcional: bordes redondeados */
 }
 
-
-
-.button {
-    margin: 20px 0 20px 0;
-    width: 150px;
-    height: 52px;
-    background-color: #FFFFFF;
-    color: #1387c1;
-    /*   font-family: "Inter", sans-serif; */
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-size: 20px;
-    font-style: normal;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-
-}
 
 /* ✨ Efecto hover (al pasar el cursor por el enlace) */
 .web-gallery:hover img,
